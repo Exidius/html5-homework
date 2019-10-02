@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "i0zqrd": {
+    "homework": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "less"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/i0zqrd",
+            "outputPath": "dist/homework",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -25,15 +21,10 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              {
-                "glob": "**/*",
-                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
-                "output": "/assets/"
-              }
+              "src/assets"
             ],
             "styles": [
-              "src/styles.less"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -72,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "i0zqrd:build"
+            "browserTarget": "homework:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "i0zqrd:build:production"
+              "browserTarget": "homework:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "i0zqrd:build"
+            "browserTarget": "homework:build"
           }
         },
         "test": {
@@ -98,7 +89,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.less"
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -120,16 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "i0zqrd:serve"
+            "devServerTarget": "homework:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "i0zqrd:serve:production"
+              "devServerTarget": "homework:serve:production"
             }
           }
         }
       }
-    }
-  },
-  "defaultProject": "i0zqrd"
+    }},
+  "defaultProject": "homework"
 }

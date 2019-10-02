@@ -1,5 +1,5 @@
 {
-  "name": "i0zqrd",
+  "name": "homework",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -19,7 +19,6 @@
     "@angular/platform-browser": "~8.2.8",
     "@angular/platform-browser-dynamic": "~8.2.8",
     "@angular/router": "~8.2.8",
-    "ng-zorro-antd": "^8.1.2",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
