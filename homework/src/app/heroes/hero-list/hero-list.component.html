@@ -2,6 +2,6 @@
     <tr *ngFor="let hero of service.list">
         <td (click)="populateForm(hero)">[{{hero.id}}]-{{hero.name}}</td>
         <td (click)="populateForm(hero)">{{hero.description}}</td>
-        <td><button class="btn btn-sm btn-outline-danger">X</button></td>
+        <td><button (click)="onDelete(hero.id)"class="btn btn-sm btn-outline-danger">X</button></td>
     </tr>
 </table>

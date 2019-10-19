@@ -16,7 +16,13 @@ export class HeroListComponent implements OnInit {
   }
 
   populateForm(hero: Hero) {
-    this.service.formData = hero;
-    console.log('clicked');
+    this.service.formData = Object.assign({}, hero);
+  }
+
+  onDelete(id: number) {
+    if (confirm('Are you sure?')) {}
+    this.service.deleteHero(id).subscribe(res => {
+      this.service.getHeroList();
+    });
   }
 }

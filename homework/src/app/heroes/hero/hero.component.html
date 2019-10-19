@@ -1,15 +1,16 @@
 <form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+    <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id"/>
     <div class="form-group">
         <label>Name</label>
-        <input name="Name" #Name="ngModel" [(ngModel)]="service.formData.name" class="form-control" required>
-        <div *ngIf="Name.invalid && Name.touched">Name is required</div>
+        <input name="name" #name="ngModel" [(ngModel)]="service.formData.name" class="form-control" required>
+        <div *ngIf="name.invalid && name.touched">Name is required</div>
     </div>
     <div class="form-group">
         <label>Description</label>
-        <input name="Description" #Description="ngModel" [(ngModel)]="service.formData.description" class="form-control">
+        <input name="desc" #desc="ngModel" [(ngModel)]="service.formData.desc" class="form-control">
     </div>
     <div class="form-control">
-        <button type="submit" [disabled]=form.invalid class="btn btn-lg-block">
+        <button type="submit" [disabled]=form.invalid class="btn">
             Submit
         </button>
     </div>

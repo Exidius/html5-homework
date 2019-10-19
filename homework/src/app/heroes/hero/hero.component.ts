@@ -20,17 +20,27 @@ export class HeroComponent implements OnInit {
       form.resetForm();
     }
     this.service.formData = {
-      Id: null,
-      Name: '',
-      Description: ''
+      id: '',
+      name: '',
+      desc: ''
     };
   }
 
   onSubmit(form: NgForm) {
-
+    if (form.value.id === '') {
+    this.insertRecord(form);
+    } else {
+      this.updateRecord(form);
+    }
   }
 
   insertRecord(form: NgForm) {
+    console.log('insertrecord');
     this.service.postHero(form.value).subscribe(res => {this.resetForm(form); });
+  }
+
+  updateRecord(form: NgForm) {
+    console.log('updaterecord');
+    this.service.putHero(form.value).subscribe(res => {this.resetForm(form); });
   }
 }
