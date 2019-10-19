@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +11,8 @@ import { HeroListComponent } from './heroes/hero-list/hero-list.component';
 import { SpeciesComponent } from './species/species.component';
 import { SpecieComponent } from './species/specie/specie.component';
 import { SpecieListComponent } from './species/specie-list/specie-list.component';
+import { HeroService } from './heroes/shared/hero.service';
+import { SpecieService } from './species/shared/specie.service';
 
 @NgModule({
   declarations: [
@@ -22,9 +26,11 @@ import { SpecieListComponent } from './species/specie-list/specie-list.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HeroService, SpecieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

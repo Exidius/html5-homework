@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HeroService } from '../shared/hero.service';
+import { Hero } from '../shared/hero.model';
 
 @Component({
   selector: 'app-hero-list',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: HeroService) { }
 
   ngOnInit() {
+    this.service.getHeroList();
   }
 
+  populateForm(hero: Hero) {
+    this.service.formData = hero;
+    console.log('clicked');
+  }
 }

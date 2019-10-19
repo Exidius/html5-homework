@@ -1,1 +1,16 @@
-<p>hero works!</p>
+<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+    <div class="form-group">
+        <label>Name</label>
+        <input name="Name" #Name="ngModel" [(ngModel)]="service.formData.name" class="form-control" required>
+        <div *ngIf="Name.invalid && Name.touched">Name is required</div>
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <input name="Description" #Description="ngModel" [(ngModel)]="service.formData.description" class="form-control">
+    </div>
+    <div class="form-control">
+        <button type="submit" [disabled]=form.invalid class="btn btn-lg-block">
+            Submit
+        </button>
+    </div>
+</form>
