@@ -15,7 +15,6 @@ export class HeroListComponent implements OnInit {
 
   ngOnInit() {
     this.service.getHeroList();
-    this.listItems = this.service.list;
   }
 
   populateForm(hero: Hero) {
@@ -26,7 +25,6 @@ export class HeroListComponent implements OnInit {
     if (confirm('Are you sure?')) {}
     this.service.deleteHero(id).subscribe(res => {
       this.service.getHeroList();
-      this.listItems = this.service.list;
     });
   }
 }

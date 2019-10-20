@@ -2,7 +2,7 @@
     <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id"/>
     <div class="form-group">
         <label>ID</label>
-        <input type="text" [disabled]="true" name="id" #id="ngModel" [(ngModel)]="service.formData.id" class="form-control"/>
+        <input name="idToShow" [disabled]="true" [(ngModel)]="service.formData.id" class="form-control"/>
     </div>
     <div class="form-group">
         <label>Name</label>
@@ -11,7 +11,7 @@
     </div>
     <div class="form-group">
         <label>Description</label>
-        <input name="desc" #desc="ngModel" [(ngModel)]="service.formData.desc" class="form-control">
+        <input name="description" #description="ngModel" [(ngModel)]="service.formData.description" class="form-control">
     </div>
     <div class="form-group btn-group w-100">
         <button type="submit" [disabled]=form.invalid class="btn btn-lg">

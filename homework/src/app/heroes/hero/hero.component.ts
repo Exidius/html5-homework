@@ -22,7 +22,7 @@ export class HeroComponent implements OnInit {
     this.service.formData = {
       id: '',
       name: '',
-      desc: ''
+      description: ''
     };
   }
 
