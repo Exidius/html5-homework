@@ -1,5 +1,5 @@
 export interface Specie {
     id: number;
     name: string;
-    description: string;
+    desc: string;
 }

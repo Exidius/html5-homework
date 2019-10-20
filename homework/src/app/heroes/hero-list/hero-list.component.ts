@@ -9,10 +9,13 @@ import { Hero } from '../shared/hero.model';
 })
 export class HeroListComponent implements OnInit {
 
+  listItems = [];
+
   constructor(private service: HeroService) { }
 
   ngOnInit() {
     this.service.getHeroList();
+    this.listItems = this.service.list;
   }
 
   populateForm(hero: Hero) {
@@ -23,6 +26,7 @@ export class HeroListComponent implements OnInit {
     if (confirm('Are you sure?')) {}
     this.service.deleteHero(id).subscribe(res => {
       this.service.getHeroList();
+      this.listItems = this.service.list;
     });
   }
 }
