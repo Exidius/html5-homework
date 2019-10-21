@@ -18,7 +18,9 @@ export class HeroComponent implements OnInit {
   resetForm(form?: NgForm) {
     if (form != null) {
       form.resetForm();
+      console.log('resetForm - form != null');
     }
+    console.log('formData = \'\'');
     this.service.formData = {
       id: '',
       name: '',
@@ -27,7 +29,7 @@ export class HeroComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    if (form.value.id === '') {
+    if (form.value.id === '' || form.value.id == null) {
     this.insertRecord(form);
     } else {
       this.updateRecord(form);
@@ -35,12 +37,10 @@ export class HeroComponent implements OnInit {
   }
 
   insertRecord(form: NgForm) {
-    console.log('insertrecord');
     this.service.postHero(form.value).subscribe(res => {this.resetForm(form); this.service.getHeroList(); });
   }
 
   updateRecord(form: NgForm) {
-    console.log('updaterecord');
     this.service.putHero(form.value).subscribe(res => {this.resetForm(form); this.service.getHeroList(); });
   }
 }

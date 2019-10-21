@@ -22,9 +22,10 @@ export class HeroListComponent implements OnInit {
   }
 
   onDelete(id: number) {
-    if (confirm('Are you sure?')) {}
-    this.service.deleteHero(id).subscribe(res => {
-      this.service.getHeroList();
-    });
+      if (confirm('Are you sure?')) {
+            this.service.deleteHero(id).subscribe(res => {
+        this.service.getHeroList();
+      });
+    }
   }
 }

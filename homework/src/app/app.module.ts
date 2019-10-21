@@ -15,6 +15,7 @@ import { SpecieListComponent } from './species/specie-list/specie-list.component
 import { HeroService } from './heroes/shared/hero.service';
 import { SpecieService } from './species/shared/specie.service';
 import { HeroListItemComponent } from './heroes/hero-list-item/hero-list-item.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +26,15 @@ import { HeroListItemComponent } from './heroes/hero-list-item/hero-list-item.co
     SpeciesComponent,
     SpecieComponent,
     SpecieListComponent,
-    HeroListItemComponent
+    HeroListItemComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    VirtualScrollerModule
+    VirtualScrollerModule,
+    AppRoutingModule,
   ],
   providers: [HeroService, SpecieService],
   bootstrap: [AppComponent]
