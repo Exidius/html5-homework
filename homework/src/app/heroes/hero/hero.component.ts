@@ -36,11 +36,11 @@ export class HeroComponent implements OnInit {
 
   insertRecord(form: NgForm) {
     console.log('insertrecord');
-    this.service.postHero(form.value).subscribe(res => {this.resetForm(form); });
+    this.service.postHero(form.value).subscribe(res => {this.resetForm(form); this.service.getHeroList(); });
   }
 
   updateRecord(form: NgForm) {
     console.log('updaterecord');
-    this.service.putHero(form.value).subscribe(res => {this.resetForm(form); });
+    this.service.putHero(form.value).subscribe(res => {this.resetForm(form); this.service.getHeroList(); });
   }
 }
