@@ -11,7 +11,7 @@ export class HeroListComponent implements OnInit {
 
   listItems = [];
 
-  constructor(private service: HeroService) { }
+  constructor(public service: HeroService) { }
 
   ngOnInit() {
     this.service.getHeroList();

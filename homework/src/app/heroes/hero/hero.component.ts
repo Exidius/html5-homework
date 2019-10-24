@@ -9,7 +9,7 @@ import { NgForm } from '@angular/forms';
 })
 export class HeroComponent implements OnInit {
 
-  constructor(private service: HeroService) { }
+  constructor(public service: HeroService) { }
 
   ngOnInit() {
     this.resetForm();

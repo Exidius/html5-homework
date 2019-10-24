@@ -9,7 +9,7 @@ import { NgForm } from '@angular/forms';
 })
 export class SpecieComponent implements OnInit {
 
-  constructor(private service: SpecieService) { }
+  constructor(public service: SpecieService) { }
 
   ngOnInit() {
     this.resetForm();

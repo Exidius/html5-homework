@@ -1,14 +1,57 @@
 <div class="navbar" *ngIf="router.url != '/'">
 <div class="row">
-    <a class="nav-link register-custom" routerLink="/heroes">Heroes</a>
-    <a class="nav-link register-custom" routerLink="/species">Species</a>
+    <button class="btn navbutton" routerLink="/">Home</button>
+    <button class="btn navbutton" routerLink="/heroes">Heroes</button>
+    <button class="btn navbutton" routerLink="/species">Species</button>
 </div>
 </div>
 <div class="welcome" *ngIf="router.url == '/'">
-<div class="jumbotron">
+                <div class="row h-10">
+                    <div class="col text-left">
+                        <img src="assets/logo.png" height="80px" width="80px"/>
+                    </div>
+                    <div class="col text-center">
+                        <a routerLink="/notready" class="uppertext">Játékosoknak</a>
+                        <a routerLink="/notready" class="uppertext">Fejlesztőknek</a>
+                        <a routerLink="/notready" class="uppertext">Rólunk</a>
+                        <a routerLink="/notready" class="uppertext">Kapcsolat</a>
+                    </div>
+                    <div class="col text-right">
+                        <a routerLink="/notready" class="uppertext">Belépés/regisztráció</a>
+                    </div>
+                </div>
+        
+                <div class="row justify-content-center" style="padding-top:10%;">
+                        <div class="h-100 d-flex flex-column">
+                            <div class="row justify-content-center flex-grow-1 text-white text-center">
+                                <div>
+                                    <h1>Heroes of empires</h1>
+                                    <hr>
+                                    <h5>Építkezős, harcolós stratégiai játék platform</h5>
+                                    <button class="btn btn-lg" routerLink="/species">Fajok</button>
+                                    <button class="btn btn-lg" routerLink="/heroes">Hősök</button>
+                                    <button class="btn btn-lg" routerLink="/notready">Birodalmak</button>
+                                    <button class="btn btn-lg" routerLink="/notready">Toplista</button>
+                                </div>
+                            </div>
+                        </div>
+                   
+                </div>
+        
+                <div class="row">
+                    <div class="container-fluid fixed-bottom">
+                        <div class="row">
+                            <div class="col text-center" style="color:rgb(50, 77, 167)">
+                                <a> OE-HTML5+ 2019-20/I - </a>
+                                <a href="#"  style="color:rgb(50, 77, 167)">
+                                    ÁSZF
+                                </a>
+                                <a href="#" style="color:rgb(50, 77, 167)">
+                                    Adatvédelem
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <button class="btn btn-lg" routerLink="/heroes">Heroes</button>
-    <button class="btn btn-lg" routerLink="/species">Species</button>
-
-</div>
 </div>

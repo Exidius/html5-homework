@@ -12,6 +12,23 @@ button[type="reset"]{
     color: #fff;
 }
 
+.btn-lg {
+    color: #fff;
+    margin: 10px;
+    background-color: rgba(33, 38, 112, 0.822);
+}
+
+.navbutton {
+    color: #fff;
+    margin: 1px;
+    background-color: rgba(33, 38, 112, 0.6);
+}
+
+.uppertext {
+    margin-right: 10px;
+    color:rgb(0, 32, 139);
+}
+
 table tr:hover{
     cursor: pointer;
     background-color: rgba(29, 29, 29, 0.10);

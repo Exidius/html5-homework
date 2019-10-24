@@ -11,7 +11,7 @@ export class SpecieListComponent implements OnInit {
 
   listItems = [];
 
-  constructor(private service: SpecieService) { }
+  constructor(public service: SpecieService) { }
 
   ngOnInit() {
     this.service.getSpecieList();
