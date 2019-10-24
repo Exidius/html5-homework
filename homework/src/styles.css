@@ -19,7 +19,13 @@ table tr:hover{
 
 .hero-list {
     overflow-y: scroll;
-    height: 500px;
+    max-height: 500px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.specie-list {
+    overflow-y: scroll;
+    max-height: 500px;
     background-color: rgba(255, 255, 255, 0.1);
 }
 

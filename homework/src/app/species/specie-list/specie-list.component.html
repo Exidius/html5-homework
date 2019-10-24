@@ -1,1 +1,10 @@
-<p>specie-list works!</p>
+<div class="specie-list scrollbar-primary">
+    <table class="table table-hover specie-list">
+        <tr *ngFor="let specie of service.list">
+            <td (click)="populateForm(specie)">{{specie.id}}</td>
+            <td (click)="populateForm(specie)">{{specie.name}}</td>
+            <td (click)="populateForm(specie)">{{specie.description}}</td>
+            <td><button (click)="onDelete(specie.id)"class="btn btn-sm btn-outline-danger">X</button></td>
+        </tr>
+    </table>
+    </div>
