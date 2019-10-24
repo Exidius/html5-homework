@@ -14,7 +14,6 @@ import { SpecieComponent } from './species/specie/specie.component';
 import { SpecieListComponent } from './species/specie-list/specie-list.component';
 import { HeroService } from './heroes/shared/hero.service';
 import { SpecieService } from './species/shared/specie.service';
-import { HeroListItemComponent } from './heroes/hero-list-item/hero-list-item.component';
 import { NavComponent } from './nav/nav.component';
 
 @NgModule({
@@ -26,7 +25,6 @@ import { NavComponent } from './nav/nav.component';
     SpeciesComponent,
     SpecieComponent,
     SpecieListComponent,
-    HeroListItemComponent,
     NavComponent
   ],
   imports: [

@@ -1,6 +1,14 @@
+<div class="navbar" *ngIf="router.url != '/'">
 <div class="row">
-    <a class="nav-link register-custom" routerLink="/heroes">Home</a>
-    <div class="col-md-6">
-        <button class="btn btn-lg">sad</button>
-    </div>    
+    <a class="nav-link register-custom" routerLink="/heroes">Heroes</a>
+    <a class="nav-link register-custom" routerLink="/species">Species</a>
+</div>
+</div>
+<div class="welcome" *ngIf="router.url == '/'">
+<div class="jumbotron">
+
+    <button class="btn btn-lg" routerLink="/heroes">Heroes</button>
+    <button class="btn btn-lg" routerLink="/species">Species</button>
+
+</div>
 </div>

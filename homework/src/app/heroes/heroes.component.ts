@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-heroes',
@@ -11,6 +11,7 @@ export class HeroesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
